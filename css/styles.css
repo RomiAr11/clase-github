@@ -1,0 +1,203 @@
+/*reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*Estilos generales*/
+
+body{
+    background-color: aliceblue;
+}
+
+/*EStilos de header*/
+
+
+header{
+    display: none;
+}
+
+/*Estilos de main*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h2{
+    color:  #182941;
+    text-align: center;
+}
+
+main h2 span{
+    display: block;
+}
+
+main p{
+    padding: 1rem;
+    text-align: center;
+}
+
+main .boton{
+    background-color: #5180df;
+    color: whitesmoke;
+    padding: 0.7rem;
+    box-shadow:  1px 1px 5px black;
+    text-shadow: 1px 1px 5px black;
+
+}
+
+main img{
+    width: 70%;
+}
+
+/*estilos de section*/
+
+section{
+    display: none;
+}
+
+/*Estilos de footer*/
+
+footer h4{
+text-align: center;
+}
+
+/* mq */
+
+@media screen and (min-width:600px){
+
+    body{
+        background-color: rgb(225, 239, 251);
+    }
+
+    /*Estilos de header*/
+
+    header{
+        display: block;
+        display: flex; 
+        justify-content: space-around;
+        align-items: center;
+        color: #182941;
+    }
+
+    header nav ul{
+        list-style: none;
+        display: flex;
+        gap: 1.3rem;
+
+    }
+
+    /*estilos de main*/
+main{
+     padding: 2rem;
+}
+   
+    /*estilos de section*/
+
+    section{
+        display: block;
+        display: flex;
+        background-color: #0ee8f1;
+    }
+
+    section div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    section div img{
+        width: 20%;
+    }
+
+    section div p{
+        text-align: center;
+    }
+    
+}
+
+@media screen and (min-width:1024px){
+
+    /*Estilos del menu*/
+    header nav ul li:hover{
+        background-color: #BEE0F1 ;
+        transform: rotate(360deg) ;
+        scale: (0.9);
+        box-shadow: 2px 2px 5px black ;
+        transition: 3s;
+
+    }
+
+    header nav ul li{
+        transition: 3s;
+
+    }
+
+
+    /*Estilos del main*/
+
+    main{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows:auto ;
+    grid-template-areas: "p img"
+    "h2 img"
+    "p-dos img"
+    "boton img";
+    justify-items: center
+ }
+
+ 
+
+   main p{
+grid-area: p;
+   }
+
+   main h2{
+    grid-area: h2;
+   }
+
+   main .p-dos{
+    grid-area: p-dos;
+   }
+
+   main .boton{
+    grid-area: boton ;
+   }
+
+   main img{
+     grid-area: img;
+   }
+   
+
+   /*Estilos de section*/
+
+   section div img{
+    animation-name: img-latido;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-delay: 4s;
+   }
+
+   @keyframes img-latido {
+    0%{
+        transform: scale(1);
+    }
+
+    15%{
+        transform: scale(1.1);
+    }
+
+    35%{
+        transform: scale(1.3);
+    }
+   }
+}
+
+   
